@@ -30,7 +30,7 @@ for column in string_data:
     label_encoders[column] = label_encoder # Save label encoder for later use
 
 #Transform "Avaliação" values into categories
-ranges = [0, 70, 80, 100]  # Define ranges, Low (0-70), Medium (70-80), High (85-100)
+ranges = [0, 70, 85, 100]  # Define ranges, Low (0-70), Medium (70-85), High (85-100)
 labels = ['Low', 'Medium', 'High']
 data['Avaliação'] = pd.cut(data['Avaliação'], bins=ranges, labels=labels)
 
